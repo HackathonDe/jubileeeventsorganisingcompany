@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jubilee Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #1a1a1a; /* Dark */
+            --accent-color: #8b0000; /* Burgundy */
+            --light-color: #f8f8f8;
+            --text-color: #333;
+            --text-light: #777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: relative;
+        }
+        
+        .logo img {
+            height: 50px;
+            transition: all 0.4s;
+        }
+        
+        header.scrolled .logo img {
+            height: 40px;
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--secondary-color);
+            padding: 10px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        
+        .dropbtn {
+            background-color: transparent;
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .dropbtn:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 5px;
+            left: 20px;
+            transition: width 0.3s;
+        }
+        
+        .dropbtn:hover {
+            color: var(--primary-color);
+        }
+        
+        .dropbtn:hover:after {
+            width: calc(100% - 40px);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-content a {
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 14px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f8f8f8;
+            color: var(--accent-color);
+            padding-left: 25px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/c.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: 80px;
+        }
+        
+        .hero-text {
+            font-size: 72px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* About Content */
+        .about-content {
+            padding: 100px 0;
+        }
+        
+        .about-content h1 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-content h1:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: var(--text-color);
+            max-width: 800px;
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin: 80px 0;
+        }
+        
+        .quote-text {
+            flex: 1;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .quote-author {
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+        
+        .quote-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .quote-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s;
+        }
+        
+        .quote-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-section h2 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .team-section h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .team-description {
+            font-size: 18px;
+            color: var(--text-color);
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .team-member {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .stats h3 {
+            font-size: 42px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .stats p {
+            font-size: 16px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Improved Footer Styles */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column {
+            padding: 0 15px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            color: #bbb;
+            font-size: 14px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-contact i {
+            margin-right: 12px;
+            color: var(--primary-color);
+            margin-top: 3px;
+            min-width: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #777;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .floating-back-to-top {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .floating-back-to-top:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+            color: white;
+            margin-left: auto;
+        }
+
+        .floating-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-text {
+                font-size: 60px;
+            }
+            
+            .quote-section {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero-text {
+                font-size: 50px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header .container {
+                padding: 15px 20px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+            }
+            
+            nav a, .dropdown {
+                margin: 15px 0;
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .dropdown {
+                margin-left: 0;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                width: 100%;
+                margin-top: 10px;
+                padding-left: 20px;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .dropbtn {
+                padding: 10px 0;
+                width: 100%;
+                text-align: left;
+            }
+            
+            .dropbtn:after {
+                left: 0;
+            }
+            
+            .dropbtn:hover:after {
+                width: 100%;
+            }
+            
+            .hero-image {
+                height: 60vh;
+                margin-top: 0;
+            }
+            
+            .hero-text {
+                font-size: 36px;
+                padding: 0 20px;
+            }
+            
+            .quote {
+                font-size: 24px;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                left: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .about-content, .team-section {
+                padding: 60px 0;
+            }
+
+            .quote-section {
+                margin: 50px 0;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero-text {
+                font-size: 32px;
+            }
+            
+            .about-content h1, .team-section h2 {
+                font-size: 36px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+
+            .footer-column:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 28px;
+            }
+
+            .about-content h1, .team-section h2 {
+                font-size: 30px;
+            }
+
+            .quote {
+                font-size: 20px;
+            }
+
+            .stats h3 {
+                font-size: 32px;
+            }
+
+            .team-member img {
+                height: 250px;
+            }
+
+            .floating-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Jubilee Events Logo">
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <div class="dropdown" id="dropdownMenu">
+                <button class="dropbtn" onclick="toggleDropdown(event)">Jubilee Events All Services ▼</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="kitchen.html">Jubilee Events Kitchen</a>
+                    <a href="Printing.html">Jubilee Events Print House</a>
+                    <a href="water.html">Jubilee Events Spring Waters</a>
+                    <a href="hire.html">Jubilee Events Hire</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+        </nav>
+    </div>
+</header>
+
+<div class="hero-image">
+    <div class="hero-text animate__animated animate__fadeIn">About Us</div>
+</div>
+
+<div class="container">
+    <div class="about-content">
+        <h1 data-aos="fade-up">Our Story</h1>
+        <div class="about-text" data-aos="fade-up" data-aos-delay="100">
+            <p>Jubilee Events Organising Company Was registered in Kenya in the year 2012, it's a premium event management Company headquartered in Nairobi, Kenya. We specialize in full-service Events Consultation, management/Planning and supply of all events needs for all types of events , from weddings, Dowry, graduations, funerals, Birthdays, Corporate Events, Political events, Religious Events etc.</p>
+            <p>Founded with a mission to bring elegance and excellence to every occasion, our team combines years of expertise in design, coordination, and execution. </p>
+        </div>
+
+        <div class="quote-section" data-aos="fade-up">
+            <div class="quote-text">
+                <p class="quote-author">Our Motto </p>
+                <p class="quote">"With you in all seasons of your life"</p>
+                
+            </div>
+            <div class="quote-img">
+                <img src="images/a.jpg" alt="Team Member Working">
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2 data-aos="fade-up">Our Team</h2>
+            <p class="team-description" data-aos="fade-up" data-aos-delay="100">
+                We believe that creativity, communication, and collaboration are the foundations of every great event. Our team is composed of designers, planners, coordinators, and storytellers who breathe life into your ideas and go beyond expectations.
+            </p>
+
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/g.jpg" alt="Team Member 1">
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/h.jpg" alt="Team Member 2">
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/i.jpg" alt="Team Member 3">
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/j.jpg" alt="Team Member 4">
+                </div>
+            </div>
+
+            <div class="stats" data-aos="fade-up">
+                <div>
+                    <h3>600+</h3>
+                    <p>Successful Events</p>
+                </div>
+                <div>
+                    <h3>700+</h3>
+                    <p>Corporate Clients</p>
+                </div>
+                <div>
+                    <h3>1.2M</h3>
+                    <p>Guests Served</p>
+                </div>
+                <div>
+                    <h3>110+</h3>
+                    <p>Venues Managed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Jubilee Events</h3>
+                <p style="color: #bbb; line-height: 1.7; margin-top: 15px;">For Consultation management and supply of all events needs for all types of events</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="kitchen.html">Jubilee Kitchen</a></li>
+                    <li><a href="print.html">Print House</a></li>
+                    <li><a href="water.html">Spring Waters</a></li>
+                    <li><a href="hire.html">Event Hire</a></li>
+                    <li><a href="#">Full Event Planning</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Kenyatta Market<br>Off Mbagathi Road<br>Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> Paul: 0711 534 170<br>Christine: 0717 315 828<br>Office: 0719 020 020</p>
+                    <p><i class="fas fa-envelope"></i> pmuthusi2020@gmail.com<br>jubileeeventsorganisingcompany@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/254711534170" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Jubilee Events Organising Company. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 12px; color: #777;">Designed with passion in Nairobi, Kenya</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="#" class="floating-btn floating-back-to-top" id="backToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <a href="https://wa.me/254719202020" class="floating-btn floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script>
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const nav = document.getElementById('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                nav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    });
+    
+    // Toggle Dropdown on Mobile
+    function toggleDropdown(e) {
+        e.preventDefault();
+        const dropdown = e.currentTarget.parentElement;
+        
+        if (window.innerWidth <= 768) {
+            dropdown.classList.toggle('active');
+        }
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        const dropdown = document.getElementById('dropdownMenu');
+        if (!dropdown.contains(e.target) && !e.target.classList.contains('dropbtn')) {
+            dropdown.classList.remove('active');
+        }
+    });
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Close mobile menu when resizing to larger screens
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            nav.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    });
+</script>
+
+</body>
+</html>

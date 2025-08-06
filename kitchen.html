@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jubilee Events Kitchen - Premium Catering Services</title>
+    <meta name="description" content="Jubilee Events Kitchen offers premium catering services for weddings, corporate events, private parties and more in Nairobi, Kenya. Quality, delicious & affordable food.">
+    <meta name="keywords" content="catering Nairobi, wedding catering, corporate catering, event catering Kenya, food services Nairobi">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #1a1a1a; /* Dark */
+            --accent-color: #8b0000; /* Burgundy */
+            --light-color: #f8f8f8;
+            --text-color: #333;
+            --text-light: #777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 12px 30px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-light {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .btn-light:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            overflow: hidden;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: relative;
+        }
+        
+        .logo img {
+            height: 50px;
+            transition: all 0.4s;
+        }
+        
+        header.scrolled .logo img {
+            height: 40px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        
+        .dropbtn {
+            background-color: transparent;
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .dropbtn:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 5px;
+            left: 20px;
+            transition: width 0.3s;
+        }
+        
+        .dropbtn:hover {
+            color: var(--primary-color);
+        }
+        
+        .dropbtn:hover:after {
+            width: calc(100% - 40px);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-content a {
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 14px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f8f8f8;
+            color: var(--accent-color);
+            padding-left: 25px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/a.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px; /* To account for fixed header */
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Specialization Section */
+        .specialization {
+            padding: 120px 0;
+            background-color: white;
+        }
+        
+        .specialization-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .specialization-text {
+            flex: 1;
+        }
+        
+        .specialization-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .specialization-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s;
+        }
+        
+        .specialization-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .specialization h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+        
+        .specialization h2 span {
+            color: var(--primary-color);
+        }
+        
+        .specialization h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-type {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s;
+        }
+        
+        .service-type:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .service-type:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-details {
+            padding: 30px;
+        }
+        
+        .service-details h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background-color: var(--light-color);
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .contact-details p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .contact-details i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
+        }
+        
+        /* Extras Section */
+        .extras {
+            padding: 120px 0;
+            background-color: white;
+        }
+        
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .extra-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 5px;
+            background-color: var(--light-color);
+            transition: all 0.4s;
+        }
+        
+        .extra-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .extra-icon {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .extra-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 120px 0;
+            background-color: var(--light-color);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Images/b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+        
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(139, 0, 0, 0.1) 100%);
+            z-index: 0;
+        }
+        
+        .testimonials .section-title h2 {
+            color: white;
+        }
+        
+        .testimonials .section-title h2:after {
+            background-color: white;
+        }
+        
+        .testimonials .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255,255,255,0.15);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            color: rgba(255,255,255,0.2);
+            font-family: serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        .author-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('Images/c.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 100px 0 30px;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: #bbb;
+        }
+        
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .floating-back-to-top {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .floating-back-to-top:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+            color: white;
+            margin-left: auto;
+        }
+
+        .floating-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 60px;
+            }
+            
+            .specialization-content {
+                flex-direction: column;
+            }
+            
+            .specialization-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero h1 {
+                font-size: 50px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header .container {
+                padding: 15px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                margin-top: 20px;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav a, .dropdown {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                width: 100%;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .dropbtn {
+                padding: 10px 0;
+            }
+            
+            .dropbtn:after {
+                left: 0;
+            }
+            
+            .dropbtn:hover:after {
+                width: 100%;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 150px 0 100px;
+                margin-top: 0;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .cta h2 {
+                font-size: 36px;
+            }
+            
+            .cta p {
+                font-size: 18px;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                left: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .services-grid, .testimonial-grid, .extras-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Jubilee Events Logo">
+            </div>
+            
+            <nav id="nav">
+                <a href="#">Home</a>
+                <div class="dropdown" id="dropdownMenu">
+                    <button class="dropbtn" onclick="toggleDropdown(event)">Jubilee Events All Services ▼</button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="kitchen.html">Jubilee Events Kitchen</a>
+                        <a href="Printing.html">Jubilee Events Print House</a>
+                        <a href="water.html">Jubilee Events Spring Waters</a>
+                        <a href="hire.html">Jubilee Events Hire</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>JUBILEE EVENTS KITCHEN</h1>
+            <h2>Cakes & Catering Services</h2>
+            <p>For Quality, Delicious & Affordable Food</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Contact Us</a>
+                <a href="#services" class="btn btn-light">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialization Section -->
+    <section class="specialization" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Specializations</h2>
+                <p>We excel in providing exceptional catering services for various events</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-type">
+                    <div class="service-img">
+                        <img src="Images/o.jpg" alt="Birthdays & Weddings">
+                    </div>
+                    <div class="service-details">
+                        <h3>Birthdays & Weddings</h3>
+                        <p>Create unforgettable moments with our exquisite catering services for your special celebrations.</p>
+                    </div>
+                </div>
+                
+                <div class="service-type">
+                    <div class="service-img">
+                        <img src="Images/c.jpg" alt="Corporate & Political Events">
+                    </div>
+                    <div class="service-details">
+                        <h3>Corporate & Political Events</h3>
+                        <p>Professional catering solutions for business meetings, conferences, and political gatherings.</p>
+                    </div>
+                </div>
+                
+                <div class="service-type">
+                    <div class="service-img">
+                        <img src="Images/s.jpg" alt="Funerals & Religious Events">
+                    </div>
+                    <div class="service-details">
+                        <h3>Funerals & Religious Events</h3>
+                        <p>Respectful and dignified catering services for solemn occasions and religious ceremonies.</p>
+                    </div>
+                </div>
+                
+                <div class="service-type">
+                    <div class="service-img">
+                        <img src="Images/p.jpg" alt="Dowry (Ruracio) Ceremonies">
+                    </div>
+                    <div class="service-details">
+                        <h3>Dowry (Ruracio) Ceremonies</h3>
+                        <p>Traditional catering that honors cultural heritage for your dowry ceremonies.</p>
+                    </div>
+                </div>
+                
+                <div class="service-type">
+                    <div class="service-img">
+                        <img src="Images/q.jpg" alt="Office Breakfast & Lunch">
+                    </div>
+                    <div class="service-details">
+                        <h3>Office Breakfast & Lunch</h3>
+                        <p>Daily catering solutions to keep your team nourished and productive.</p>
+                    </div>
+                </div>
+                
+                <div class="service-type">
+                    <div class="service-img">
+                        <img src="Images/r.jpg" alt="Canteen Maintenance">
+                    </div>
+                    <div class="service-details">
+                        <h3>Canteen Maintenance</h3>
+                        <p>Comprehensive canteen services for schools, offices, and institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extras Section -->
+    <section class="extras">
+        <div class="container">
+            <div class="section-title">
+                <h2>Extras Available Upon Request</h2>
+                <p>Complete event solutions beyond just catering</p>
+            </div>
+            <div class="extras-grid">
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>PA Systems</h3>
+                    <p>High quality sound systems for your events</p>
+                </div>
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>Tents</h3>
+                    <p>Various sizes available for all occasions</p>
+                </div>
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <h3>Chairs</h3>
+                    <p>Comfortable seating for your guests</p>
+                </div>
+                <div class="extra-card">
+                    <div class="extra-icon">
+                        <i class="fas fa-restroom"></i>
+                    </div>
+                    <h3>Toilets</h3>
+                    <p>Clean and hygienic facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Gallery</h2>
+                <p>A glimpse of our culinary creations and events we've catered</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/a.jpg" alt="Catering Event">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/b.jpg" alt="Food Presentation">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/c.jpg" alt="Wedding Catering">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/d.jpg" alt="Event Setup">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/e.jpg" alt="Culinary Art">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>Hear what our clients say about our catering services</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The food was absolutely spectacular! Our guests couldn't stop raving about the presentation and flavors. The service was impeccable from start to finish.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Images/t.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Cate Wangui</h4>
+                            <p>Wedding Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">We've used Jubilee Events Kitchen for three corporate events now, and each time they exceed our expectations. Professional, reliable, and delicious food every time.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Images/v.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Wambugu</h4>
+                            <p>Corporate Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">For my mother's 70th birthday, they created a custom menu that accommodated all dietary needs. The staff was attentive and made the evening truly special.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Images/u.jpg" alt="Emily Rodriguez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jane Kwamboka</h4>
+                            <p>Private Party Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch to discuss your catering needs</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Contact Details</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Upperhill & Karen, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 711 534170 / +254 719 020202</p>
+                        <p><i class="fas fa-envelope"></i> jubileeeventsorganisingcompany@gmail.com</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254711534170" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Plan Your Event?</h2>
+            <p>Contact us today to discuss your catering needs and let us create a memorable dining experience for your guests.</p>
+            <a href="#contact" class="btn btn-light">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Jubilee Events Kitchen</h3>
+                    <p>A division within Jubilee Events Organising Company providing quality, delicious and affordable food services for all occasions.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="kitchen.html">Jubilee Kitchen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Wedding Catering</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Private Parties</a></li>
+                        <li><a href="#">Religious Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Upperhill & Karen, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 711 534170 / +254 719 020202</p>
+                        <p><i class="fas fa-envelope"></i> jubileeeventsorganisingcompany@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jubilee Events Organising Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="#" class="floating-btn floating-back-to-top" id="backToTopBtn" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/254711534170" class="floating-btn floating-whatsapp" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownContent = document.getElementById('dropdownContent');
+        
+        // Toggle Dropdown on Mobile
+        function toggleDropdown(e) {
+            e.preventDefault();
+            if (window.innerWidth <= 768) {
+                dropdownMenu.classList.toggle('active');
+            }
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdownMenu.contains(e.target) && !e.target.classList.contains('dropbtn')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.opacity = '1';
+                backToTopBtn.style.visibility = 'visible';
+            } else {
+                backToTopBtn.style.opacity = '0';
+                backToTopBtn.style.visibility = 'hidden';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.service-type, .testimonial-card, .extra-card, .gallery-item');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            };
+            
+            // Run once on load
+            animateOnScroll();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+        
+        // Gallery Lightbox (placeholder functionality)
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // In a real implementation, this would open a lightbox with the full image
+                alert('In a complete implementation, this would open a lightbox with the full image.');
+            });
+        });
+
+        // Preload important images
+        function preloadImage(url) {
+            const img = new Image();
+            img.src = url;
+        }
+
+        // Preload hero image and other important images
+        window.addEventListener('load', () => {
+            preloadImage('Images/a.jpg');
+            preloadImage('Images/b.jpg');
+            preloadImage('Images/c.jpg');
+        });
+    </script>
+</body>
+</html>

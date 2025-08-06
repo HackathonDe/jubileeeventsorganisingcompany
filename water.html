@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jubilee Spring Waters | Premium Water Delivery in Kenya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #1a1a1a; /* Dark */
+            --accent-color: #0066cc; /* Blue */
+            --light-color: #f8f8f8;
+            --text-color: #333;
+            --text-light: #777;
+            --water-blue: #e6f2ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 12px 30px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-light {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .btn-light:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            overflow: hidden;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: relative;
+        }
+        
+        .logo img {
+            height: 50px;
+            transition: all 0.4s;
+        }
+        
+        header.scrolled .logo img {
+            height: 40px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        
+        .dropbtn {
+            background-color: transparent;
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .dropbtn:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 5px;
+            left: 20px;
+            transition: width 0.3s;
+        }
+        
+        .dropbtn:hover {
+            color: var(--primary-color);
+        }
+        
+        .dropbtn:hover:after {
+            width: calc(100% - 40px);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-content a {
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 14px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f8f8f8;
+            color: var(--accent-color);
+            padding-left: 25px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/a.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--water-blue);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.4s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .product-img {
+            height: 300px;
+            overflow: hidden;
+            background-color: var(--water-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-img img {
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.8s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-details {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .product-details h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .price {
+            font-size: 28px;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .transport-note {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Images/d.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+        
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 102, 204, 0.1) 100%);
+            z-index: 0;
+        }
+        
+        .testimonials .section-title h2 {
+            color: white;
+        }
+        
+        .testimonials .section-title h2:after {
+            background-color: white;
+        }
+        
+        .testimonials .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255,255,255,0.15);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            color: rgba(255,255,255,0.2);
+            font-family: serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        .author-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background-color: var(--light-color);
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .contact-details p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .contact-details i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('Images/j.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 100px 0 30px;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: #bbb;
+        }
+        
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .payment-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .floating-back-to-top {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .floating-back-to-top:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+            color: white;
+            margin-left: auto;
+        }
+
+        .floating-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-5px);
+        }
+
+        /* Popup Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: modalFadeIn 0.4s;
+        }
+
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        .modal-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .form-submit {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .form-submit:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .product-info {
+            background-color: var(--water-blue);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+        }
+
+        .product-info strong {
+            color: var(--secondary-color);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 60px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero h1 {
+                font-size: 50px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header .container {
+                padding: 15px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                margin-top: 20px;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav a, .dropdown {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                width: 100%;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .dropbtn {
+                padding: 10px 0;
+            }
+            
+            .dropbtn:after {
+                left: 0;
+            }
+            
+            .dropbtn:hover:after {
+                width: 100%;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 150px 0 100px;
+                margin-top: 0;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .cta h2 {
+                font-size: 36px;
+            }
+            
+            .cta p {
+                font-size: 18px;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                left: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .products-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 20% auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Jubilee Events Logo">
+            </div>
+            
+            <nav id="nav">
+                <a href="index.html">Home</a>
+                <div class="dropdown" id="dropdownMenu">
+                    <button class="dropbtn" onclick="toggleDropdown(event)">Jubilee Events All Services ▼</button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="kitchen.html">Jubilee Events Kitchen</a>
+                        <a href="Printing.html">Jubilee Events Print House</a>
+                        <a href="water.html">Jubilee Spring Waters</a>
+                        <a href="hire.html">Jubilee Events Hire</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>JUBILEE EVENTS SPRING WATERS</h1>
+            <p>Pure, refreshing spring water sourced from Kenya's finest natural springs</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Order Now</a>
+                <a href="#products" class="btn btn-light">Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Jubilee Waters</h2>
+                <p>Premium quality water with unmatched service across Kenya</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Natural Purity</h3>
+                    <p>Sourced from pristine Kenyan springs, naturally filtered through volcanic rock</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Quality Certified</h3>
+                    <p>KEBS certified and regularly tested to ensure the highest quality standards</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Reliable Delivery</h3>
+                    <p>Timely delivery to homes and offices across Nairobi and beyond</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Recyclable packaging and sustainable production practices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Water Products</h2>
+                <p>Available in various sizes for every need</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Images/g1.jpg" alt="Normal Water 24 Packs">
+                    </div>
+                    <div class="product-details">
+                        <h3>Normal Water 24 Packs</h3>
+                        <p>500ml premium spring water in convenient plastic bottles (24 bottles per pack)</p>
+                        <div class="price">KSh 480</div>
+                        <p class="transport-note">*Transport charged based on distance and quantity</p>
+                        <button class="btn order-btn" data-product="Normal Water 24 Packs" data-price="480">Order Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Images/g1.jpg" alt="Branded Normal Bottle">
+                    </div>
+                    <div class="product-details">
+                        <h3>Branded Normal Bottle</h3>
+                        <p>500ml premium spring water with custom Jubilee branding</p>
+                        <div class="price">KSh 600</div>
+                        <p class="transport-note">*Transport charged based on distance and quantity</p>
+                        <button class="btn order-btn" data-product="Branded Normal Bottle" data-price="600">Order Now</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Images/g1.jpg" alt="Branded Executive">
+                    </div>
+                    <div class="product-details">
+                        <h3>Branded Executive</h3>
+                        <p>Premium 750ml glass bottles with custom Jubilee branding for special occasions</p>
+                        <div class="price">KSh 720</div>
+                        <p class="transport-note">*Transport charged based on distance and quantity</p>
+                        <button class="btn order-btn" data-product="Branded Executive" data-price="720">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Kenyan Clients Say</h2>
+                <p>Hear from satisfied customers across Kenya</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Jubilee Waters has been supplying our office for over a year. The quality is consistently excellent and their delivery is always on time. Our staff love the crisp, refreshing taste."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Images/b.jpg" alt="Wanjiru K.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Wanjiru K.</h4>
+                            <p>Office Manager, Westlands</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"We used Jubilee's executive glass bottles for our wedding in Karen. The premium packaging added a touch of class to our reception. Many guests commented on how good the water tasted!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Images/e1.jpg" alt="James M.">
+                        </div>
+                        <div class="author-info">
+                            <h4>James & Amina</h4>
+                            <p>Wedding Clients, Karen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a hotel in Mombasa, we need reliable water supply. Jubilee never disappoints. Their 19L dispensers are perfect for our guests and the service is mambo sawa!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Images/c.jpg" alt="Fatuma A.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Fatuma A.</h4>
+                            <p>Hotel Manager, Mombasa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Order Your Water Today</h2>
+                <p>Get pure spring water delivered to your doorstep in Kenya</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi Headquarters: Jubilee House, Waiyaki Way</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Mombasa Branch: Nyali Centre, Mombasa Road</p>
+                        <p><i class="fas fa-phone"></i> Nairobi: 0711 534170 / 0719 020202</p>
+                        <p><i class="fas fa-phone"></i> Mombasa: 0702 987654</p>
+                        <p><i class="fas fa-envelope"></i> water@jubileeevents.co.ke</p>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;">Payment Methods</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-m-pesa payment-icon"></i>
+                        <i class="fab fa-cc-visa payment-icon"></i>
+                        <i class="fab fa-cc-mastercard payment-icon"></i>
+                        <i class="fas fa-money-bill-wave payment-icon"></i>
+                    </div>
+                    <p style="margin-top: 15px;"><strong>M-Pesa Paybill:</strong> 123456 <strong>Account:</strong> Your Name</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254711534170" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Experience the Jubilee Difference</h2>
+            <p>Join thousands of satisfied customers enjoying Kenya's purest spring water</p>
+            <a href="#contact" class="btn btn-light">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Jubilee Spring Waters</h3>
+                    <p>A division of Jubilee Events providing premium spring water across Kenya since 2015.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Normal Water 24 Packs</a></li>
+                        <li><a href="#">Branded Normal Bottle</a></li>
+                        <li><a href="#">Branded Executive</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Mombasa, Kenya</p>
+                        <p><i class="fas fa-phone"></i> 0711 534170 / 0719 020202</p>
+                        <p><i class="fas fa-envelope"></i> water@jubileeevents.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jubilee Events Organising Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="#" class="floating-btn floating-back-to-top" id="backToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/254711534170" class="floating-btn floating-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 class="modal-title">Order Details</h3>
+            
+            <div class="product-info">
+                <p><strong>Product:</strong> <span id="modalProductName"></span></p>
+                <p><strong>Price:</strong> KSh <span id="modalProductPrice"></span></p>
+            </div>
+            
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="quantity">How many bottles/packs?</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Delivery Location</label>
+                    <input type="text" id="location" name="location" required placeholder="Enter your delivery address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Complete Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownContent = document.getElementById('dropdownContent');
+        
+        // Toggle Dropdown on Mobile
+        function toggleDropdown(e) {
+            e.preventDefault();
+            if (window.innerWidth <= 768) {
+                dropdownMenu.classList.toggle('active');
+            }
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdownMenu.contains(e.target) && !e.target.classList.contains('dropbtn')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.feature-card, .product-card, .testimonial-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+
+        // Order Modal Functionality
+        const modal = document.getElementById('orderModal');
+        const orderBtns = document.querySelectorAll('.order-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const orderForm = document.getElementById('orderForm');
+        const modalProductName = document.getElementById('modalProductName');
+        const modalProductPrice = document.getElementById('modalProductPrice');
+
+        // Current product being ordered
+        let currentProduct = null;
+
+        // Open modal when order button is clicked
+        orderBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                currentProduct = {
+                    name: this.getAttribute('data-product'),
+                    price: this.getAttribute('data-price')
+                };
+                
+                modalProductName.textContent = currentProduct.name;
+                modalProductPrice.textContent = currentProduct.price;
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        // Close modal when X is clicked
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+        });
+
+        // Handle form submission
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const quantity = document.getElementById('quantity').value;
+            const location = document.getElementById('location').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const notes = document.getElementById('notes').value;
+            
+            // Calculate total price
+            const totalPrice = quantity * currentProduct.price;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `New Water Order:\n\n` +
+                `*Product:* ${currentProduct.name}\n` +
+                `*Quantity:* ${quantity}\n` +
+                `*Unit Price:* KSh ${currentProduct.price}\n` +
+                `*Total Price:* KSh ${totalPrice}\n` +
+                `*Delivery Location:* ${location}\n` +
+                `*Customer Name:* ${name}\n` +
+                `*Phone Number:* ${phone}\n` +
+                `*Additional Notes:* ${notes || 'None'}`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp with the message
+            window.open(`https://wa.me/254711534170?text=${encodedMessage}`, '_blank');
+            
+            // Close modal
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            
+            // Reset form
+            orderForm.reset();
+        });
+
+        // Update all "Order Now" buttons to use the modal
+        document.querySelectorAll('a.btn[href="#contact"]').forEach(btn => {
+            // Change to button if it's in a product card
+            if (btn.closest('.product-card')) {
+                const productCard = btn.closest('.product-card');
+                const productName = productCard.querySelector('h3').textContent;
+                const productPrice = productCard.querySelector('.price').textContent.replace('KSh ', '');
+                
+                // Replace anchor with button
+                const newBtn = document.createElement('button');
+                newBtn.className = 'btn order-btn';
+                newBtn.textContent = 'Order Now';
+                newBtn.setAttribute('data-product', productName);
+                newBtn.setAttribute('data-price', productPrice);
+                
+                btn.replaceWith(newBtn);
+            }
+        });
+    </script>
+</body>
+</html>

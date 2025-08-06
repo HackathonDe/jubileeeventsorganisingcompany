@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jubilee Events & Organising Company | Event Services Hire in Kenya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #1a1a1a; /* Dark */
+            --accent-color: #0066cc; /* Blue */
+            --light-color: #f8f8f8;
+            --text-color: #333;
+            --text-light: #777;
+            --water-blue: #e6f2ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 12px 30px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-light {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .btn-light:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            overflow: hidden;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: relative;
+        }
+        
+        .logo img {
+            height: 50px;
+            transition: all 0.4s;
+        }
+        
+        header.scrolled .logo img {
+            height: 40px;
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--secondary-color);
+            padding: 10px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        
+        .dropbtn {
+            background-color: transparent;
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .dropbtn:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 5px;
+            left: 20px;
+            transition: width 0.3s;
+        }
+        
+        .dropbtn:hover {
+            color: var(--primary-color);
+        }
+        
+        .dropbtn:hover:after {
+            width: calc(100% - 40px);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-content a {
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 14px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f8f8f8;
+            color: var(--accent-color);
+            padding-left: 25px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511578314322-379afb476865');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-img {
+            height: 250px;
+            overflow: hidden;
+            background-color: var(--water-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-details {
+            padding: 30px;
+        }
+        
+        .service-details h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .service-details h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .service-items {
+            list-style-type: none;
+        }
+        
+        .service-items li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 16px;
+        }
+        
+        .service-items li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+        
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 102, 204, 0.1) 100%);
+            z-index: 0;
+        }
+        
+        .testimonials .section-title h2 {
+            color: white;
+        }
+        
+        .testimonials .section-title h2:after {
+            background-color: white;
+        }
+        
+        .testimonials .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255,255,255,0.15);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            color: rgba(255,255,255,0.2);
+            font-family: serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        .author-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background-color: var(--light-color);
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .contact-details p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .contact-details i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/h1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 100px 0 30px;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: #bbb;
+        }
+        
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .payment-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .floating-back-to-top {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .floating-back-to-top:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+            color: white;
+            margin-left: auto;
+        }
+
+        .floating-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 60px;
+            }
+            
+            .services-grid, .testimonial-grid {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero h1 {
+                font-size: 50px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .service-card, .testimonial-card {
+                transform: none !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header .container {
+                padding: 15px 20px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+            }
+            
+            nav a, .dropdown {
+                margin: 15px 0;
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .dropdown {
+                margin-left: 0;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                width: 100%;
+                margin-top: 10px;
+                padding-left: 20px;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .dropbtn {
+                padding: 10px 0;
+                width: 100%;
+                text-align: left;
+            }
+            
+            .dropbtn:after {
+                left: 0;
+            }
+            
+            .dropbtn:hover:after {
+                width: 100%;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 120px 0 80px;
+                margin-top: 0;
+                min-height: auto;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .section-title p {
+                font-size: 16px;
+            }
+            
+            .services-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-img {
+                height: 200px;
+            }
+            
+            .service-details, .testimonial-card {
+                padding: 25px;
+            }
+            
+            .cta h2 {
+                font-size: 36px;
+            }
+            
+            .cta p {
+                font-size: 18px;
+            }
+            
+            .contact-info h3 {
+                font-size: 24px;
+            }
+            
+            .contact-details p {
+                font-size: 16px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-details i {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                left: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .service-details h3, .contact-info h3, .footer-column h3 {
+                font-size: 22px;
+            }
+            
+            .testimonial-text {
+                font-size: 16px;
+            }
+            
+            .author-img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .author-info h4 {
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-column {
+                margin-bottom: 30px;
+            }
+            
+            .footer-column:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+            
+            .service-items li {
+                font-size: 15px;
+            }
+            
+            .testimonial-card {
+                padding: 20px;
+            }
+            
+            .testimonial-author {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .author-img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .payment-methods {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .service-img {
+                height: 180px;
+            }
+            
+            .service-details {
+                padding: 20px;
+            }
+            
+            .floating-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Jubilee Events Logo">
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav id="nav">
+                <a href="index.html">Home</a>
+                <div class="dropdown" id="dropdownMenu">
+                    <button class="dropbtn" onclick="toggleDropdown(event)">Jubilee Events All Services ▼</button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="kitchen.html">Jubilee Events Kitchen</a>
+                        <a href="Printing.html">Jubilee Events Print House</a>
+                        <a href="water.html">Jubilee Spring Waters</a>
+                        <a href="hire.html">Jubilee Events Hire</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>JUBILEE EVENTS HIRE / SALE SERVICES</h1>
+            <p>Complete event solutions for weddings, corporate functions, and special occasions across Kenya</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Book Now</a>
+                <a href="#services" class="btn btn-light">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Comprehensive Hire Services</h2>
+                <p>Everything you need to make your event successful</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Event Equipment & Setup Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/m1.jpg" alt="Event Equipment & Setup">
+                    </div>
+                    <div class="service-details">
+                        <h3>Event Equipment & Setup Hire</h3>
+                        <ul class="service-items">
+                            <li>Chairs (Plastic, Chiavari, Executive)</li>
+                            <li>Tables (Round, Cocktail, Banquet, Folding)</li>
+                            <li>Tents & Canopies (Wedding tents, Pagodas, Gazebos)</li>
+                            <li>Stages, Platforms, Podiums</li>
+                            <li>Carpets & Flooring</li>
+                            <li>Lighting Equipment (Floodlights, Mood lighting, Spotlights)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Catering Services Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/n1.jpg" alt="Catering Services">
+                    </div>
+                    <div class="service-details">
+                        <h3>Catering Services Hire</h3>
+                        <ul class="service-items">
+                            <li>Full-Service Event Catering (Buffet, Plated, BBQ)</li>
+                            <li>Mobile Kitchen Units</li>
+                            <li>Cutlery, Crockery & Glassware</li>
+                            <li>Catering Staff (Chefs, Servers, Bartenders)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Entertainment & Hosting Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/o1.jpg" alt="Entertainment & Hosting">
+                    </div>
+                    <div class="service-details">
+                        <h3>Entertainment & Hosting Hire</h3>
+                        <ul class="service-items">
+                            <li>DJs & Live Bands</li>
+                            <li>MCs / Event Hosts</li>
+                            <li>Traditional Dancers & Performers</li>
+                            <li>Sound Systems & PA Equipment</li>
+                            <li>LED Screens / Projectors</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Audio-Visual & Tech Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/p1.jpg" alt="Audio-Visual & Tech">
+                    </div>
+                    <div class="service-details">
+                        <h3>Audio-Visual & Tech Hire</h3>
+                        <ul class="service-items">
+                            <li>LED Walls & Projectors</li>
+                            <li>Microphones (Cordless, Lapel, Headset)</li>
+                            <li>Mixers, Amplifiers</li>
+                            <li>Event Live Streaming</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Transport & Logistics Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/q1.jpg" alt="Transport & Logistics">
+                    </div>
+                    <div class="service-details">
+                        <h3>Transport & Logistics Hire</h3>
+                        <ul class="service-items">
+                            <li>VIP Transport (Chauffeur-driven cars)</li>
+                            <li>Shuttle Services (Guest & Crew)</li>
+                            <li>Delivery & Setup Teams</li>
+                            <li>Mobile Toilets</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Décor & Styling Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8" alt="Décor & Styling">
+                    </div>
+                    <div class="service-details">
+                        <h3>Décor & Styling Hire</h3>
+                        <ul class="service-items">
+                            <li>Themed Decorations (Weddings, Baby Showers, Corporate)</li>
+                            <li>Floral Arrangements</li>
+                            <li>Draping & Backdrops</li>
+                            <li>Table Centerpieces</li>
+                            <li>Candlelight & Lantern Décor</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Media & Branding Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/r1.jpg" alt="Media & Branding">
+                    </div>
+                    <div class="service-details">
+                        <h3>Media & Branding Hire</h3>
+                        <ul class="service-items">
+                            <li>Event Photography & Videography</li>
+                            <li>Instant Photo Booths</li>
+                            <li>Event Branding (Banners, Backdrops)</li>
+                            <li>Branded Souvenirs (Mugs, T-Shirts, Gift Bags)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Kids & Family Entertainment Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/s1.jpg" alt="Kids & Family Entertainment">
+                    </div>
+                    <div class="service-details">
+                        <h3>Kids & Family Entertainment Hire</h3>
+                        <ul class="service-items">
+                            <li>Bouncy Castles</li>
+                            <li>Face Painting</li>
+                            <li>Clowns & Magicians</li>
+                            <li>Kids Furniture</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Attire & Uniform Hire -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/t1.jpg" alt="Attire & Uniform">
+                    </div>
+                    <div class="service-details">
+                        <h3>Attire & Uniform Hire</h3>
+                        <ul class="service-items">
+                            <li>Ushers' Uniforms</li>
+                            <li>Chef/Catering Uniforms</li>
+                            <li>Event Staff Branded Attire</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Corporate & Formal Event Services -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="Images/u1.jpg" alt="Corporate & Formal Events">
+                    </div>
+                    <div class="service-details">
+                        <h3>Corporate & Formal Event Services</h3>
+                        <ul class="service-items">
+                            <li>Conference Setup & Equipment</li>
+                            <li>Boardroom Setup</li>
+                            <li>Seminar Kits & Stationery</li>
+                            <li>Name Tags & Registration Desks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from satisfied customers across Kenya</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Jubilee Events provided everything we needed for our wedding - from chairs and tents to catering and photography. Their team was professional and made our special day perfect!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah K.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah K.</h4>
+                            <p>Wedding Client, Nairobi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Our annual corporate retreat was transformed by Jubilee's professional AV equipment and conference setup. Everything worked flawlessly and their team was incredibly responsive."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James M.">
+                        </div>
+                        <div class="author-info">
+                            <h4>James M.</h4>
+                            <p>Corporate Client, Mombasa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The kids' entertainment package made our daughter's birthday party the talk of the school! The bouncy castle and magician kept all the children engaged and happy for hours."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Fatuma A.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Fatuma A.</h4>
+                            <p>Parent, Nakuru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Event Services</h2>
+                <p>Get everything you need for your next event in Kenya</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi Headquarters: Jubilee House, Waiyaki Way</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Mombasa Branch: Nyali Centre, Mombasa Road</p>
+                        <p><i class="fas fa-phone"></i> Nairobi: 0711 534170 / 0719 020202</p>
+                        <p><i class="fas fa-phone"></i> Mombasa: 0702 987654</p>
+                        <p><i class="fas fa-envelope"></i> hire@jubileeevents.co.ke</p>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;">Payment Methods</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-m-pesa payment-icon"></i>
+                        <i class="fab fa-cc-visa payment-icon"></i>
+                        <i class="fab fa-cc-mastercard payment-icon"></i>
+                        <i class="fas fa-money-bill-wave payment-icon"></i>
+                    </div>
+                    <p style="margin-top: 15px;"><strong>M-Pesa Paybill:</strong> 123456 <strong>Account:</strong> Your Name</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254711534170" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Make Your Event Unforgettable</h2>
+            <p>Partner with Kenya's premier event services provider</p>
+            <a href="#contact" class="btn btn-light">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Jubilee Events Hire</h3>
+                    <p>A division of Jubilee Events providing comprehensive event services across Kenya since 2015.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Service Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="Equipments.html">Equipment Hire</a></li>
+                        <li><a href="catering.html">Catering Services</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">AV & Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> 0711 534170 / 0719 020202</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jubilee Events Organising Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="#" class="floating-btn floating-back-to-top" id="backToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/254711534170" class="floating-btn floating-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    nav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Toggle Dropdown on Mobile
+        function toggleDropdown(e) {
+            e.preventDefault();
+            const dropdown = e.currentTarget.parentElement;
+            
+            if (window.innerWidth <= 768) {
+                dropdown.classList.toggle('active');
+            }
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            const dropdown = document.getElementById('dropdownMenu');
+            if (!dropdown.contains(e.target) && !e.target.classList.contains('dropbtn')) {
+                dropdown.classList.remove('active');
+            }
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768 && nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Close mobile menu when resizing to larger screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Initialize animations on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.service-card, .testimonial-card');
+            
+            const animateOnScroll = function() {
+                animateElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state
+            animateElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Run once on load
+            animateOnScroll();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>
